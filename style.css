@@ -466,19 +466,19 @@ li {
 .product-banner {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	height: 50.5rem;
+	height: 50rem;
 	background-color: #243a6f;
 }
-.product-banner .left {
+.product-banner .left img {
 	object-fit: cover;
-	height: 100%;
+	height: 97.6%;
 }
 .product-banner .right {
-	align-items: center;
-	top: 50%;
+	align-self: center;
 	text-align: center;
-	padding: 10rem;
+	padding: 1.6rem;
 }
+
 .product-banner .content h2 {
 	color: #fbb419;
 	font-size: 3rem;
@@ -496,4 +496,94 @@ li {
 	line-height: 1;
 }
 @media (max-width: 996px) {
+	.product-banner .content h1 span {
+		font-size: 5rem;
+	}
+}
+
+@media (max-width: 768px) {
+	.product-banner {
+		grid-template-columns: 1fr;
+	}
+	.product-banner .left {
+		display: none;
+	}
+	.product-banner .content h1 span {
+		font-size: 4rem;
+	}
+	.product-banner .content h2 {
+		font-size: 4rem;
+	}
+	.product-banner .content a {
+		padding: 1rem 3rem;
+	}
+}
+
+/* --------Testimonal----------- */
+.testimonial-center {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+	gap: 6rem;
+}
+.testimonial {
+	position: relative;
+	padding: 5rem;
+	background-color: #fff;
+	box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+	transition: all 300ms ease-in-out;
+	text-align: center;
+	border-radius: 0.5rem;
+}
+.testimonial:hover {
+	box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.4);
+	transform: translate(-1rem);
+}
+.testimonial span {
+	position: absolute;
+	top: 2%;
+	left: 50%;
+	font-size: 12rem;
+	transform: translate(-50%, 0);
+	line-height: 1;
+	font-family: sans-serif;
+}
+.testimonial p {
+	margin: 2rem 0 1rem 0;
+}
+.testimonial .rating {
+	margin-bottom: 1rem;
+}
+.testimonial .img-cover {
+	border-radius: 50%;
+	width: 8rem;
+	height: 8rem;
+	overflow: hidden;
+	margin: 0 auto;
+}
+.testimonial .img-cover img {
+	object-fit: cover;
+	height: 100%;
+}
+.testimonial h4 {
+	margin-top: 1rem;
+}
+/* BRAND-------- */
+
+.brands-center {
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	gap: 3rem;
+}
+.brand {
+	height: 8rem;
+	width: 8rem;
+	margin: 0 auto;
+}
+.brand img {
+	object-fit: contain;
+}
+@media (max-width: 768px) {
+	.brands-center {
+		grid-template-columns: repeat(3, 1fr);
+	}
 }
