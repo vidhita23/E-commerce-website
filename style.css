@@ -69,7 +69,23 @@ li {
 	background-size: cover;
 }
 .nav {
-	padding: 2.5rem 0;
+	padding: 1rem 0;
+}
+.nav.fix-nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+
+	background-color: #243a6f;
+	box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+	z-index: 999;
+}
+.nav.fix-nav .nav-link,
+.nav.fix-nav .cart-icon,
+.nav.fix-nav .logo,
+.nav.fix-nav .hamburger {
+	color: #fff;
 }
 .navigation {
 	display: flex;
@@ -585,5 +601,50 @@ li {
 @media (max-width: 768px) {
 	.brands-center {
 		grid-template-columns: repeat(3, 1fr);
+	}
+}
+/* footer-------------------- */
+.footer {
+	background-color: #222;
+	padding: 6rem;
+	line-height: 3rem;
+}
+.footer-center {
+	margin-right: 1rem;
+}
+.footer-container {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	color: #fff;
+}
+.footer-center a:link,
+.footer-center a:visited {
+	display: block;
+	color: #f1f1f1;
+	font-size: 1.4rem;
+	transition: 0.6s;
+}
+.footer-center a:hover {
+	color: #f60091;
+}
+.footer-center div {
+	color: #f1f1f1;
+	font-size: 1.4rem;
+}
+.footer-center h3 {
+	font-size: 3rem;
+	font-weight: 400;
+	margin-bottom: 1rem;
+}
+
+@media (max-width: 996px) {
+	.footer-container {
+		grid-template-columns: repeat(2, 1fr);
+		row-gap: 2rem;
+	}
+}
+@media (max-width: 768px) {
+	.footer-container {
+		grid-template-columns: 1fr;
 	}
 }
